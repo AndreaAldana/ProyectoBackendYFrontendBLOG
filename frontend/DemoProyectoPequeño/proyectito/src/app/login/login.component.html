@@ -1,0 +1,61 @@
+
+
+<br>
+<br>
+<body class="bg-light" class="container mat-elevation-z4" style="padding: 1em; margin: auto; width: 50%;">
+    <div class="container" style="width: 100%; padding: 1em; margin: auto; background-color: white;">
+<form role="form">
+    <fieldset>
+        <h6 class="display-4" style="text-align: center; font-size: 2.5em;">¡Qué genial tenerte de vuelta!</h6>
+        <br>
+        <hr class="colorgraph">
+        <div class="form-group">
+            <input type="email" name="email" id="email" class="form-control input-lg" required placeholder="correo@ejemplo.com" #correo>
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" id="password" class="form-control input-lg" type="password" required placeholder="contraseña mínimo 4 carácteres" #contrasena>
+        </div>
+        <span class="button-checkbox">
+            <button type="button" class="btn" data-color="info">Remember Me</button>
+            <input type="checkbox" name="remember_me" id="remember_me" checked="checked" class="hidden">
+           
+        </span>
+        <hr class="colorgraph">
+        <br>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <input type="submit" class="btn btn-lg btn-success btn-block" value="Acceder" (click)="loginUsuario(correo.value, contrasena.value)">
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <a href="" class="btn btn-lg btn-primary btn-block" [routerLink]="['/registro']">Registrarse</a>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+</div>
+</body>
+
+
+<!-- 
+    
+<div style="width: 50%; margin: 2em auto">
+    <form class="mat-elevation-z4" style="padding: 1em;">
+        <h2 style="text-align: center;">Inscríbete acá</h2>
+       
+      
+        <mat-form-field appearance="outline">
+            <mat-label>Correo Electrónico</mat-label>
+            <input matInput type="email" required placeholder="correo@ejemplo.com" #correo>
+        </mat-form-field>
+<br>
+        <mat-form-field appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" required placeholder="contraseña mínimo 4 carácteres" #contrasena>
+        </mat-form-field>
+        <br>
+        
+        <button mat-raised-button color="primary" style="margin: 1em 1em 0 0"(click)="loginUsuario(correo.value, contrasena.value)">Iniciar Sesión</button>
+        <button type="reset" mat-raised-button color="warn" style="margin: 1em 1em 0 0">Limpiar</button>
+    </form>
+</div> --> -->

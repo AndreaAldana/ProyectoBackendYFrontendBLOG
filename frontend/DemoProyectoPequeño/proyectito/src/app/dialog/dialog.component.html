@@ -1,0 +1,46 @@
+
+    
+    
+    
+      <br>
+        
+        <div style="width:100%; padding:2em;">
+          <h6 class="display-4" style="text-align: center; font-size: 2.5em;">Actualice sus datos</h6>
+          <br>
+          <br>
+          <mat-form-field style="width:100%;">
+            <mat-label #nombres>Ingrese sus nombres</mat-label>
+            <input matInput style="width:80%;" [(ngModel)]="user.nombres" name="nombres">
+          </mat-form-field>
+        
+          <br>
+          <mat-form-field style="width:100%;">
+            <mat-label #apellidos >Ingrese sus apellidos</mat-label>
+            <input matInput style="width:80%;" [(ngModel)]="user.apellidos" name="apellidos">
+          </mat-form-field>
+          <br>
+          <mat-form-field style="width:100%;">
+            <mat-label #fechaNacimiento >Fecha de nacimiento</mat-label>
+            <input matInput style="width:80%;" [(ngModel)]="user.fechaNacimiento" name="fechaNacimiento">
+          </mat-form-field>
+          <br>
+          <mat-form-field style="width:100%;">
+            <mat-label #correo >Correo electrónico</mat-label>
+            <input matInput style="width:80%;" [(ngModel)]="user.correo" name="correo">
+          </mat-form-field>
+          <br>
+          <mat-form-field style="width:100%;">
+            <mat-label #contra >Nueva contraseña</mat-label>
+            <input matInput style="width:80%;" [(ngModel)]="user.contrasenha" name="contra">
+          </mat-form-field>
+         
+          <br>
+    <div class="row">
+        <div class="col">
+            <button [mat-dialog-close]="true" mat-raised-button color="primary" (click)="guardar()" style="margin-left: 6em;">Guardar cambios</button>
+           
+            
+        </div>
+    </div>
+  </div>
+    
