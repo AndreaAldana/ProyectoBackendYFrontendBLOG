@@ -68,7 +68,7 @@ export class RegistroComponent implements OnInit {
     }
   
 
-    this.usuarioService.registro({rut, nombres, apellidos, fechaNacimiento, correo, contrasenha} as Usuario).subscribe(_ => {alert("Registro exitoso"); window.location.reload()},
+    this.usuarioService.registro({rut, nombres, apellidos, fechaNacimiento, correo, contrasenha} as Usuario).subscribe(_ => {alert("Registro exitoso"); this.router.navigate(['home'])},
     error => {alert("Este correo ya se encuentra en uso")} );
   }
 

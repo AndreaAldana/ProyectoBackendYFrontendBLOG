@@ -34,12 +34,18 @@ export class TablaComponent implements OnInit {
 
   borrar(i){
     const rut = this.usuario[i].rut
-    
-      this.usuarioService.borrarUser(rut).subscribe(_=> this.usuarioService.mostrarUsuarios().subscribe(_ => {this.router.navigate(['home'])}));
-      console.log(this.usuario);
-    console.log(rut);
-  
+
+    this.usuarioService.borrarUser(rut).subscribe(_=>this.obtenerUserAct());
+
 }
+
+obtenerUserAct() {
+  this.usuarioService.mostrarUsuarios()
+    .subscribe(usuarios => this.usuario = usuarios);
+}
+
+
+
 }
 
 /* borrar(rut: string, index: number){
